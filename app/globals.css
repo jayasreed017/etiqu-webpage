@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
+
 @layer base {
   :root {
     --navy: #0A2540;
     --navy-light: #0F3460;
     --navy-dark: #061829;
-    --gold: #B8922A;
+    --gold: #f5b70c;
     --gold-light: #D4A843;
-    --gold-dark: #8A6D1F;
+    --gold-dark: #e7ab06;
     --white: #FFFFFF;
     --off-white: #F8F7F4;
     --gray-100: #F3F4F6;

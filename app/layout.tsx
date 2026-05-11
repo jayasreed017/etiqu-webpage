@@ -18,10 +18,10 @@ const inter = Inter({
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://etiqu.com'),
-  title: 'ETIQU | Developing Tomorrow\'s Business Owners',
-  description: 'ETIQU is a premier institution dedicated to accelerating professional trajectories and developing the next generation of business owners through our comprehensive Entrepreneurship Program.',
+  title: 'ETIQU | Build Your Career with ETIQU',
+  description: 'ETIQU has flourished to being one of the India\'s most unconventional, dynamic and spirited Marketing & Advertising Organization.',
   openGraph: {
-    title: 'ETIQU | Developing Tomorrow\'s Business Owners',
+    title: 'ETIQU | Build Your Career with ETIQU',
     description: 'A legacy of excellence in professional development and entrepreneurship.',
     images: [
       {

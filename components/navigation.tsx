@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { motion, AnimatePresence } from 'framer-motion';
@@ -38,9 +39,13 @@ export function Navigation() {
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
           <Link href="/" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 border-2 border-[var(--gold)] flex items-center justify-center">
-              <span className="font-playfair text-[var(--gold)] text-lg font-bold">E</span>
-            </div>
+            <Image
+              src="/logo.png"
+              alt="ETIQU"
+              width={40}
+              height={40}
+              className="object-contain"
+            />
             <span className="font-playfair text-2xl font-semibold text-white tracking-wide">
               ETIQU
             </span>

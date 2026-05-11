@@ -9,9 +9,9 @@ import { Roadmap } from '@/components/roadmap';
 
 const stats = [
   { value: '10+', label: 'Years of Excellence' },
-  { value: '5,000+', label: 'Professionals Trained' },
-  { value: '200+', label: 'Business Owners Developed' },
-  { value: '15+', label: 'Countries Reached' },
+  { value: '20+', label: 'National Awards' },
+  { value: '60+', label: 'Business Associates' },
+  { value: '2+', label: 'New Cities' },
 ];
 
 const pillars = [
@@ -62,8 +62,8 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
           >
-            Developing Tomorrow&apos;s<br />
-            <span className="text-[var(--gold)]">Business Owners</span>
+            Build Your Career with<br />
+            <span className="text-[var(--gold)]">ETIQU</span>
           </motion.h1>
 
           <motion.p
@@ -72,8 +72,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
           >
-            ETIQU is a premier institution dedicated to accelerating professional
-            trajectories and cultivating the next generation of entrepreneurial leaders.
+            ETIQU has flourished to being one of India&apos;s most unconventional, dynamic and spirited Marketing & Advertising Organization.
           </motion.p>
 
           <motion.div
@@ -170,7 +169,7 @@ export default function Home() {
           <SectionHeading
             light
             label="The Path to Ownership"
-            title="Your Five-Level Roadmap"
+            title="Your Seven-Level Roadmap"
             description="A structured progression from Business Associate to Business Owner, designed to build competence, confidence, and independence at every stage."
           />
 
