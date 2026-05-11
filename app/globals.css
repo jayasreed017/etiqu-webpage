@@ -90,12 +90,12 @@
     height: 1px;
     background: linear-gradient(90deg, transparent 0%, var(--gold) 50%, transparent 100%);
   }
-  .parallax-bg {
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
+.parallax-bg {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+}
 }
 
 html {
@@ -105,4 +105,9 @@ html {
 ::selection {
   background-color: var(--gold);
   color: white;
+}
+@supports (-webkit-touch-callout: none) {
+  .parallax-bg {
+    background-attachment: scroll;
+  }
 }
