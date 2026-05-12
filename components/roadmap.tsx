@@ -59,7 +59,7 @@ export function Roadmap() {
       if (!containerRef.current) return;
       const rect = containerRef.current.getBoundingClientRect();
       const scrollProgress = Math.max(0, Math.min(1, -rect.top / (rect.height - window.innerHeight)));
-      const stage = Math.min(4, Math.floor(scrollProgress * 5));
+      const stage = Math.min(6, Math.floor(scrollProgress * 7));
       setActiveStage(stage);
     };
 
@@ -92,13 +92,13 @@ export function Roadmap() {
                 key={stage.level}
                 className={`relative flex items-start mb-20 last:mb-0 ${
                   isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
-                } flex-row`}
+                } flex-col md:flex-row`}
               >
                 {/* Content */}
                 <motion.div
-                  className={`flex-1 pl-16 md:pl-0 ${
+                  className={`flex-1 ${
                     isLeft ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left'
-                  }`}
+                  } pl-16 md:pl-0`}
                   initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true, margin: '-50px' }}
@@ -122,7 +122,7 @@ export function Roadmap() {
                 </motion.div>
 
                 {/* Node */}
-                <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 z-10">
+                <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 top-0 md:top-4 z-10">
                   <motion.div
                     className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${
                       isActive

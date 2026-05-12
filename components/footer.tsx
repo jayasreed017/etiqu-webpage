@@ -7,8 +7,8 @@ export function Footer() {
     <footer className="bg-[var(--navy-dark)] text-white/70">
       <div className="section-divider" />
       <div className="max-w-7xl mx-auto px-6 lg:px-8 py-20">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-          <div className="lg:col-span-1">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-12">
+          <div>
             <div className="flex items-center gap-3 mb-6">
               <Image
                 src="/logo.png"
@@ -24,37 +24,6 @@ export function Footer() {
             <p className="text-sm leading-relaxed text-white/50">
               Developing tomorrow&apos;s business owners through excellence, integrity, and unwavering commitment to professional growth.
             </p>
-          </div>
-
-          <div>
-            <h4 className="font-playfair text-[var(--gold)] text-sm tracking-widest uppercase mb-6">
-              Quick Links
-            </h4>
-            <ul className="space-y-3">
-              {['Home', 'About', 'Opportunity', 'Gallery', 'Contact'].map((item) => (
-                <li key={item}>
-                  <Link
-                    href={item === 'Home' ? '/' : `/${item.toLowerCase()}`}
-                    className="text-sm text-white/50 hover:text-[var(--gold)] transition-colors duration-300"
-                  >
-                    {item}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div>
-            <h4 className="font-playfair text-[var(--gold)] text-sm tracking-widest uppercase mb-6">
-              Programs
-            </h4>
-            <ul className="space-y-3">
-              {['Business Associate', 'Team Leader', 'Manager', 'Director', 'Business Owner'].map((item) => (
-                <li key={item}>
-                  <span className="text-sm text-white/50">{item}</span>
-                </li>
-              ))}
-            </ul>
           </div>
 
           <div>

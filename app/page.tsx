@@ -110,14 +110,14 @@ export default function Home() {
       {/* Stats Section */}
       <section className="bg-white py-20">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-12">
             {stats.map((stat, i) => (
               <FadeIn key={stat.label} delay={i * 0.1}>
                 <div className="text-center">
-                  <div className="font-playfair text-3xl md:text-4xl font-bold text-[var(--navy)] mb-2">
+                  <div className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--navy)] mb-3 md:mb-4">
                     {stat.value}
                   </div>
-                  <div className="text-sm text-gray-500 tracking-wide uppercase">
+                  <div className="text-xs md:text-sm text-gray-500 tracking-wide uppercase">
                     {stat.label}
                   </div>
                 </div>
@@ -170,7 +170,7 @@ export default function Home() {
             light
             label="The Path to Ownership"
             title="Your Seven-Level Roadmap"
-            description="A structured progression from Business Associate to Business Owner, designed to build competence, confidence, and independence at every stage."
+            description="A structured progression from Business Associate to Business Head, designed to build competence, confidence, and independence at every stage."
           />
 
           <Roadmap />
