@@ -56,12 +56,12 @@ const values = [
 
 const team = [
   {
-    image: '/team1.jpg',
+    image: '/team2.jpg',
     name: 'Mr. Bala Krishnan K',
     role: 'MD of Cameo Inc, Madurai',
   },
   {
-    image: '/team2.jpg',
+    image: '/team1.jpg',
     name: 'Mr. Prem Kumar G',
     role: 'Asst. Owner of Etiqu',
   },
