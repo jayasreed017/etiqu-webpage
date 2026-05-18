@@ -17,19 +17,24 @@ const stats = [
 const pillars = [
   {
     icon: Award,
-    title: 'Excellence',
-    description: 'We set the highest standards in professional development, ensuring every graduate is equipped to lead with distinction.',
+    title: 'PERFORMANCE-BASED PROMOTIONS',
+    description: 'At ETIQU, growth is driven by performance, consistency, and leadership potential. Individuals who demonstrate strong results are provided with faster career advancement opportunities.',
   },
   {
     icon: Target,
-    title: 'Integrity',
-    description: 'Our foundation rests on unwavering ethical principles, building trust that endures across every business relationship.',
+    title: 'LEADERSHIP DEVELOPMENT',
+    description: 'We focus on building future leaders by developing communication, management, presentation, and decision-making skills through structured training programs.',
   },
   {
     icon: Users,
-    title: 'Community',
-    description: 'A global network of professionals united by shared ambition, mutual support, and a commitment to collective growth.',
+    title: 'BUSINESS EXPOSURE',
+    description: 'Gain practical experience by working with dynamic teams, interacting with clients, and understanding real-world business operations and marketing strategies.A global network of professionals united by shared ambition, mutual support, and a commitment to collective growth.',
   },
+  {
+    icon: Users,
+    title: 'TRAVEL & NETWORKING OPPORTUNITIES',
+    description: 'Get opportunities for professional travel, networking events, and business development programs that expand exposure and confidence.A global network of professionals united by shared ambition, mutual support, and a commitment to collective growth.',
+  }
 ];
 
 export default function Home() {
@@ -135,10 +140,10 @@ export default function Home() {
           <SectionHeading
             label="Our Foundation"
             title="Built on Principles That Endure"
-            description="Three pillars define our approach to professional development and set ETIQU apart as a leader in entrepreneurial education."
+            description="Four pillars define our approach to professional development and set ETIQU apart as a leader in entrepreneurial education."
           />
 
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pillars.map((pillar, i) => {
               const Icon = pillar.icon;
               return (
