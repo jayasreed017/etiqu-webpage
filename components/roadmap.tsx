@@ -71,6 +71,7 @@ export function Roadmap() {
     <div ref={containerRef} className="relative">
       <div className="max-w-5xl mx-auto px-6 lg:px-8">
         <div className="relative">
+
           {/* Vertical line */}
           <div className="absolute left-6 md:left-1/2 top-0 bottom-0 w-px bg-white/10 md:-translate-x-px">
             <motion.div
@@ -92,53 +93,100 @@ export function Roadmap() {
                 key={stage.level}
                 className={`relative flex items-start mb-20 last:mb-0 ${
                   isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
-                } flex-col md:flex-row`}
+                }`}
               >
-                {/* Content */}
-                <motion.div
-                  className={`flex-1 ${
-                    isLeft ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left'
-                  } pl-16 md:pl-0`}
-                  initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
-                  whileInView={{ opacity: 1, x: 0 }}
-                  viewport={{ once: true, margin: '-50px' }}
-                  transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  <span className={`inline-block text-xs tracking-[0.3em] uppercase font-semibold mb-2 transition-colors duration-500 ${
-                    isActive ? 'text-[var(--gold)]' : 'text-white/30'
-                  }`}>
-                    Level {stage.level}
-                  </span>
-                  <h3 className={`font-playfair text-xl md:text-2xl font-semibold mb-3 transition-colors duration-500 ${
-                    isActive ? 'text-white' : 'text-white/40'
-                  }`}>
-                    {stage.title}
-                  </h3>
-                  <p className={`text-sm leading-relaxed transition-colors duration-500 ${
-                    isActive ? 'text-white/60' : 'text-white/20'
-                  }`}>
-                    {stage.description}
-                  </p>
-                </motion.div>
+                {/* Mobile Layout */}
+                <div className="flex items-start gap-5 w-full md:hidden">
+                  {/* Icon Node */}
+                  <div className="relative z-10 shrink-0 mt-1">
+                    <motion.div
+                      className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${
+                        isActive
+                          ? 'border-[var(--gold)] bg-[var(--gold)]/20'
+                          : 'border-white/20 bg-[var(--navy-dark)]'
+                      }`}
+                      whileInView={{ scale: [0.8, 1] }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <Icon size={20} className={isActive ? 'text-[var(--gold)]' : 'text-white/30'} />
+                    </motion.div>
+                  </div>
 
-                {/* Node */}
-                <div className="absolute left-6 md:left-1/2 md:-translate-x-1/2 top-0 md:top-4 z-10">
+                  {/* Text Content */}
                   <motion.div
-                    className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${
-                      isActive
-                        ? 'border-[var(--gold)] bg-[var(--gold)]/20'
-                        : 'border-white/20 bg-[var(--navy-dark)]'
-                    }`}
-                    whileInView={{ scale: [0.8, 1] }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.5 }}
+                    className="flex-1 text-left"
+                    initial={{ opacity: 0, x: 20 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
                   >
-                    <Icon size={20} className={isActive ? 'text-[var(--gold)]' : 'text-white/30'} />
+                    <span className={`inline-block text-xs tracking-[0.3em] uppercase font-semibold mb-2 transition-colors duration-500 ${
+                      isActive ? 'text-[var(--gold)]' : 'text-white/30'
+                    }`}>
+                      Level {stage.level}
+                    </span>
+                    <h3 className={`font-playfair text-xl font-semibold mb-3 transition-colors duration-500 ${
+                      isActive ? 'text-white' : 'text-white/40'
+                    }`}>
+                      {stage.title}
+                    </h3>
+                    <p className={`text-sm leading-relaxed transition-colors duration-500 ${
+                      isActive ? 'text-white/60' : 'text-white/20'
+                    }`}>
+                      {stage.description}
+                    </p>
                   </motion.div>
                 </div>
 
-                {/* Spacer for the other side */}
-                <div className="hidden md:block flex-1" />
+                {/* Desktop Layout */}
+                <>
+                  {/* Content */}
+                  <motion.div
+                    className={`hidden md:block flex-1 ${
+                      isLeft ? 'md:pr-16 md:text-right' : 'md:pl-16 md:text-left'
+                    }`}
+                    initial={{ opacity: 0, x: isLeft ? -30 : 30 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true, margin: '-50px' }}
+                    transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
+                  >
+                    <span className={`inline-block text-xs tracking-[0.3em] uppercase font-semibold mb-2 transition-colors duration-500 ${
+                      isActive ? 'text-[var(--gold)]' : 'text-white/30'
+                    }`}>
+                      Level {stage.level}
+                    </span>
+                    <h3 className={`font-playfair text-xl md:text-2xl font-semibold mb-3 transition-colors duration-500 ${
+                      isActive ? 'text-white' : 'text-white/40'
+                    }`}>
+                      {stage.title}
+                    </h3>
+                    <p className={`text-sm leading-relaxed transition-colors duration-500 ${
+                      isActive ? 'text-white/60' : 'text-white/20'
+                    }`}>
+                      {stage.description}
+                    </p>
+                  </motion.div>
+
+                  {/* Node - Desktop */}
+                  <div className="hidden md:block absolute left-1/2 -translate-x-1/2 top-4 z-10">
+                    <motion.div
+                      className={`w-12 h-12 rounded-full border-2 flex items-center justify-center transition-all duration-500 ${
+                        isActive
+                          ? 'border-[var(--gold)] bg-[var(--gold)]/20'
+                          : 'border-white/20 bg-[var(--navy-dark)]'
+                      }`}
+                      whileInView={{ scale: [0.8, 1] }}
+                      viewport={{ once: true }}
+                      transition={{ duration: 0.5 }}
+                    >
+                      <Icon size={20} className={isActive ? 'text-[var(--gold)]' : 'text-white/30'} />
+                    </motion.div>
+                  </div>
+
+                  {/* Spacer */}
+                  <div className="hidden md:block flex-1" />
+                </>
               </div>
             );
           })}

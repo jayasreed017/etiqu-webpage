@@ -145,13 +145,13 @@ export default function Home() {
 {/* WHY ETIQU Section */}
 <section className="bg-[var(--navy-dark)] py-28 overflow-hidden">
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <div className="xl:hidden absolute left-1/2 top-0 h-full w-px bg-white/20 -translate-x-1/2" />
 
     {/* Heading */}
     <div className="text-center mb-20">
       <span className="text-[var(--gold)] uppercase tracking-[0.35em] text-sm font-semibold">
         Why Choose ETIQU
       </span>
-
       <h2 className="font-playfair text-4xl md:text-6xl text-white mt-5">
         WHY ETIQU
       </h2>
@@ -160,97 +160,106 @@ export default function Home() {
     {/* Timeline */}
     <div className="relative">
 
-      {/* Horizontal Line */}
+      {/* Horizontal Line - Desktop only */}
       <div className="hidden xl:block absolute top-12 left-0 w-full h-px bg-white/20" />
+
+      {/* Vertical Line - Mobile/Tablet only */}
+      <div className="xl:hidden absolute left-1/2 top-0 h-full w-px bg-white/20 -translate-x-1/2" />
 
       {/* Items */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-14 xl:gap-6 relative z-10">
 
         {/* Item 1 */}
-        <div className="text-center group">
-          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+        <div className="text-center group cursor-pointer">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500
+            group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]
+            group-active:border-[var(--gold)] group-active:text-[var(--gold)]">
             01
           </div>
-
-          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4
+            group-hover:text-[var(--gold)] group-active:text-[var(--gold)] transition-colors duration-300">
             GROWTH-DRIVEN CULTURE
           </h3>
-
           <p className="text-white/60 text-sm leading-7">
             Fast-track professional growth through performance-based opportunities.
           </p>
         </div>
 
         {/* Item 2 */}
-        <div className="text-center group">
-          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+        <div className="text-center group cursor-pointer">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500
+            group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]
+            group-active:border-[var(--gold)] group-active:text-[var(--gold)]">
             02
           </div>
-
-          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4
+            group-hover:text-[var(--gold)] group-active:text-[var(--gold)] transition-colors duration-300">
             LEADERSHIP DEVELOPMENT
           </h3>
-
           <p className="text-white/60 text-sm leading-7">
             Build essential leadership skills through structured training and mentorship.
           </p>
         </div>
 
         {/* Item 3 */}
-        <div className="text-center group">
-          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+        <div className="text-center group cursor-pointer">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500
+            group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]
+            group-active:border-[var(--gold)] group-active:text-[var(--gold)]">
             03
           </div>
-
-          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4
+            group-hover:text-[var(--gold)] group-active:text-[var(--gold)] transition-colors duration-300">
             BUSINESS EXPOSURE
           </h3>
-
           <p className="text-white/60 text-sm leading-7">
             Gain real-world experience working with clients and understanding business operations.
           </p>
         </div>
 
         {/* Item 4 */}
-        <div className="text-center group">
-          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+        <div className="text-center group cursor-pointer">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500
+            group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]
+            group-active:border-[var(--gold)] group-active:text-[var(--gold)]">
             04
           </div>
-
-          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4
+            group-hover:text-[var(--gold)] group-active:text-[var(--gold)] transition-colors duration-300">
             TEAMWORK & COLLABORATION
           </h3>
-
           <p className="text-white/60 text-sm leading-7">
             Collaborate with diverse teams and learn from experienced mentors.
           </p>
         </div>
 
         {/* Item 5 */}
-        <div className="text-center group">
-          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+        <div className="text-center group cursor-pointer">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500
+            group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]
+            group-active:border-[var(--gold)] group-active:text-[var(--gold)]">
             05
           </div>
-
-          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4
+            group-hover:text-[var(--gold)] group-active:text-[var(--gold)] transition-colors duration-300">
             PERFORMANCE-BASED OPPORTUNITIES
           </h3>
-
           <p className="text-white/60 text-sm leading-7">
             Fast-track your career with opportunities based on performance and leadership potential.
           </p>
         </div>
 
         {/* Item 6 */}
-        <div className="text-center group">
-          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+        <div className="text-center group cursor-pointer">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500
+            group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]
+            group-active:border-[var(--gold)] group-active:text-[var(--gold)]">
             06
           </div>
-
-          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4
+            group-hover:text-[var(--gold)] group-active:text-[var(--gold)] transition-colors duration-300">
             ENTREPRENEURIAL MINDSET
           </h3>
-
           <p className="text-white/60 text-sm leading-7">
             Develop an entrepreneurial mindset with exposure to business operations and client interactions.
           </p>
