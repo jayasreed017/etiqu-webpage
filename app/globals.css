@@ -112,3 +112,86 @@ html {
     background-attachment: scroll;
   }
 }
+/* ── Competitive Advantage cards ── */
+.benefits-card {
+  position: relative;
+  overflow: hidden;
+}
+
+.benefits-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-dark) 100%);
+  opacity: 0;
+  transition: opacity 0.4s ease;
+}
+
+.benefits-card:hover::before {
+  opacity: 1;
+}
+
+.benefits-card::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(245,183,12,0.04) 0%, transparent 60%);
+  opacity: 0;
+  transition: opacity 0.5s ease;
+  pointer-events: none;
+}
+
+.benefits-card:hover::after {
+  opacity: 1;
+}
+/* ── Benefits cards — alternating light colored backgrounds ── */
+.benefits-card:nth-child(1) {
+  background: #EEF2F7;
+  border-color: rgba(10, 37, 64, 0.08);
+}
+.benefits-card:nth-child(2) {
+  background: #FDF8EC;
+  border-color: rgba(245, 183, 12, 0.2);
+}
+.benefits-card:nth-child(3) {
+  background: #EEF2F7;
+  border-color: rgba(10, 37, 64, 0.08);
+}
+.benefits-card:nth-child(4) {
+  background: #FDF8EC;
+  border-color: rgba(245, 183, 12, 0.2);
+}
+.benefits-card:nth-child(5) {
+  background: #EEF2F7;
+  border-color: rgba(10, 37, 64, 0.08);
+}
+.benefits-card:nth-child(6) {
+  background: #FDF8EC;
+  border-color: rgba(245, 183, 12, 0.2);
+}
+
+/* Remove any dark-card text overrides from before */
+.benefits-card:nth-child(1) h3,
+.benefits-card:nth-child(2) h3,
+.benefits-card:nth-child(4) h3,
+.benefits-card:nth-child(6) h3 {
+  color: var(--navy);
+}
+
+.benefits-card:nth-child(1) p,
+.benefits-card:nth-child(2) p,
+.benefits-card:nth-child(4) p,
+.benefits-card:nth-child(6) p {
+  color: #6B7280;
+}
+
+.benefits-card:nth-child(1) .w-14,
+.benefits-card:nth-child(2) .w-14,
+.benefits-card:nth-child(4) .w-14,
+.benefits-card:nth-child(6) .w-14 {
+  border-color: rgba(5, 2, 48, 0.3);
+  background: transparent;
+}

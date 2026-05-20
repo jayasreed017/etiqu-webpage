@@ -18,23 +18,27 @@ const pillars = [
   {
     icon: Award,
     title: 'PERFORMANCE-BASED PROMOTIONS',
-    description: 'At ETIQU, growth is driven by performance, consistency, and leadership potential. Individuals who demonstrate strong results are provided with faster career advancement opportunities.',
+    description:
+      'At ETIQU, growth is driven by performance, consistency, and leadership potential. Individuals who demonstrate strong results are provided with faster career advancement opportunities.',
   },
   {
     icon: Target,
     title: 'LEADERSHIP DEVELOPMENT',
-    description: 'We focus on building future leaders by developing communication, management, presentation, and decision-making skills through structured training programs.',
+    description:
+      'We focus on building future leaders by developing communication, management, presentation, and decision-making skills through structured training programs.',
   },
   {
     icon: Users,
     title: 'BUSINESS EXPOSURE',
-    description: 'Gain practical experience by working with dynamic teams, interacting with clients, and understanding real-world business operations and marketing strategies.A global network of professionals united by shared ambition, mutual support, and a commitment to collective growth.',
+    description:
+      'Gain practical experience by working with dynamic teams, interacting with clients, and understanding real-world business operations and marketing strategies.',
   },
   {
     icon: Users,
     title: 'TRAVEL & NETWORKING OPPORTUNITIES',
-    description: 'Get opportunities for professional travel, networking events, and business development programs that expand exposure and confidence.A global network of professionals united by shared ambition, mutual support, and a commitment to collective growth.',
-  }
+    description:
+      'Get opportunities for professional travel, networking events, and business development programs that expand exposure and confidence.',
+  },
 ];
 
 export default function Home() {
@@ -45,16 +49,22 @@ export default function Home() {
         <div
           className="absolute inset-0 parallax-bg"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920')",
+            backgroundImage:
+              "url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920')",
           }}
         />
+
         <div className="absolute inset-0 hero-overlay" />
 
         <div className="relative z-10 max-w-5xl mx-auto px-6 text-center">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.3, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 1,
+              delay: 0.3,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
             <span className="inline-block text-[var(--gold)] text-xs tracking-[0.4em] uppercase font-semibold mb-8">
               Since 2015
@@ -65,9 +75,14 @@ export default function Home() {
             className="font-playfair text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-semibold text-white leading-[1.1] mb-8"
             initial={{ opacity: 0, y: 40 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 1,
+              delay: 0.5,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
-            Build Your Career with<br />
+            Build Your Career with
+            <br />
             <span className="text-[var(--gold)]">ETIQU</span>
           </motion.h1>
 
@@ -75,15 +90,25 @@ export default function Home() {
             className="text-lg md:text-xl text-white/60 max-w-2xl mx-auto mb-12 leading-relaxed"
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.7, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 1,
+              delay: 0.7,
+              ease: [0.22, 1, 0.36, 1],
+            }}
           >
-            ETIQU has flourished to being one of India&apos;s most unconventional, dynamic and spirited Marketing & Advertising Organization.
+            ETIQU has flourished to being one of India&apos;s most
+            unconventional, dynamic and spirited Marketing & Advertising
+            Organization.
           </motion.p>
 
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 1, delay: 0.9, ease: [0.22, 1, 0.36, 1] }}
+            transition={{
+              duration: 1,
+              delay: 0.9,
+              ease: [0.22, 1, 0.36, 1],
+            }}
             className="flex flex-col sm:flex-row items-center justify-center gap-4"
           >
             <Link
@@ -93,6 +118,7 @@ export default function Home() {
               Explore the Program
               <ArrowRight size={16} />
             </Link>
+
             <Link
               href="/about"
               className="inline-flex items-center gap-2 border border-white/30 text-white px-8 py-4 text-sm tracking-widest uppercase font-semibold hover:border-[var(--gold)] hover:text-[var(--gold)] transition-all duration-300"
@@ -102,15 +128,138 @@ export default function Home() {
           </motion.div>
         </div>
 
-        {/* Scroll indicator */}
+        {/* Scroll Indicator */}
         <motion.div
           className="absolute bottom-8 left-1/2 -translate-x-1/2"
           animate={{ y: [0, 8, 0] }}
-          transition={{ duration: 2, repeat: Infinity, ease: 'easeInOut' }}
+          transition={{
+            duration: 2,
+            repeat: Infinity,
+            ease: 'easeInOut',
+          }}
         >
           <div className="w-px h-12 bg-gradient-to-b from-transparent to-[var(--gold)]" />
         </motion.div>
       </section>
+
+{/* WHY ETIQU Section */}
+<section className="bg-[var(--navy-dark)] py-28 overflow-hidden">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+    {/* Heading */}
+    <div className="text-center mb-20">
+      <span className="text-[var(--gold)] uppercase tracking-[0.35em] text-sm font-semibold">
+        Why Choose ETIQU
+      </span>
+
+      <h2 className="font-playfair text-4xl md:text-6xl text-white mt-5">
+        WHY ETIQU
+      </h2>
+    </div>
+
+    {/* Timeline */}
+    <div className="relative">
+
+      {/* Horizontal Line */}
+      <div className="hidden xl:block absolute top-12 left-0 w-full h-px bg-white/20" />
+
+      {/* Items */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-14 xl:gap-6 relative z-10">
+
+        {/* Item 1 */}
+        <div className="text-center group">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+            01
+          </div>
+
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+            GROWTH-DRIVEN CULTURE
+          </h3>
+
+          <p className="text-white/60 text-sm leading-7">
+            Fast-track professional growth through performance-based opportunities.
+          </p>
+        </div>
+
+        {/* Item 2 */}
+        <div className="text-center group">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+            02
+          </div>
+
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+            LEADERSHIP DEVELOPMENT
+          </h3>
+
+          <p className="text-white/60 text-sm leading-7">
+            Build essential leadership skills through structured training and mentorship.
+          </p>
+        </div>
+
+        {/* Item 3 */}
+        <div className="text-center group">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+            03
+          </div>
+
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+            BUSINESS EXPOSURE
+          </h3>
+
+          <p className="text-white/60 text-sm leading-7">
+            Gain real-world experience working with clients and understanding business operations.
+          </p>
+        </div>
+
+        {/* Item 4 */}
+        <div className="text-center group">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+            04
+          </div>
+
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+            TEAMWORK & COLLABORATION
+          </h3>
+
+          <p className="text-white/60 text-sm leading-7">
+            Collaborate with diverse teams and learn from experienced mentors.
+          </p>
+        </div>
+
+        {/* Item 5 */}
+        <div className="text-center group">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+            05
+          </div>
+
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+            PERFORMANCE-BASED OPPORTUNITIES
+          </h3>
+
+          <p className="text-white/60 text-sm leading-7">
+            Fast-track your career with opportunities based on performance and leadership potential.
+          </p>
+        </div>
+
+        {/* Item 6 */}
+        <div className="text-center group">
+          <div className="w-24 h-24 mx-auto rounded-full border border-white/40 bg-[var(--navy)] flex items-center justify-center text-3xl font-bold text-white transition-all duration-500 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)]">
+            06
+          </div>
+
+          <h3 className="text-white text-lg font-semibold mt-8 mb-4">
+            ENTREPRENEURIAL MINDSET
+          </h3>
+
+          <p className="text-white/60 text-sm leading-7">
+            Develop an entrepreneurial mindset with exposure to business operations and client interactions.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</section>
 
       {/* Stats Section */}
       <section className="bg-white py-20">
@@ -122,6 +271,7 @@ export default function Home() {
                   <div className="font-playfair text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--navy)] mb-3 md:mb-4">
                     {stat.value}
                   </div>
+
                   <div className="text-xs md:text-sm text-gray-500 tracking-wide uppercase">
                     {stat.label}
                   </div>
@@ -139,22 +289,25 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
             label="Our Foundation"
-            title="Built on Principles That Endure"
+            title="GROWTH OPPORTUNITIES"
             description="Four pillars define our approach to professional development and set ETIQU apart as a leader in entrepreneurial education."
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {pillars.map((pillar, i) => {
               const Icon = pillar.icon;
+
               return (
                 <FadeIn key={pillar.title} delay={i * 0.15}>
                   <div className="bg-white p-10 border border-gray-100 hover:border-[var(--gold)]/30 transition-all duration-500 group">
                     <div className="w-14 h-14 border border-[var(--gold)]/30 flex items-center justify-center mb-6 group-hover:bg-[var(--gold)]/10 transition-colors duration-500">
                       <Icon size={24} className="text-[var(--gold)]" />
                     </div>
+
                     <h3 className="font-playfair text-xl font-semibold text-[var(--navy)] mb-4">
                       {pillar.title}
                     </h3>
+
                     <p className="text-sm text-gray-500 leading-relaxed">
                       {pillar.description}
                     </p>
@@ -187,9 +340,11 @@ export default function Home() {
         <div
           className="absolute inset-0 parallax-bg"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920')",
+            backgroundImage:
+              "url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920')",
           }}
         />
+
         <div className="absolute inset-0 hero-overlay" />
 
         <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
@@ -198,17 +353,21 @@ export default function Home() {
               Begin Your Journey
             </span>
           </FadeIn>
+
           <FadeIn delay={0.1}>
             <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">
-              Accelerating Professional Trajectories
+              ACCELERATING CAREER GROWTH
             </h2>
           </FadeIn>
+
           <FadeIn delay={0.2}>
             <p className="text-white/60 text-lg leading-relaxed mb-10">
-              Take the first step toward business ownership. Connect with our team
-              and discover how ETIQU can transform your professional future.
+              Take the first step toward business ownership. Connect with
+              our team and discover how ETIQU can transform your
+              professional future.
             </p>
           </FadeIn>
+
           <FadeIn delay={0.3}>
             <Link
               href="/contact"

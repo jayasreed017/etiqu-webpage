@@ -10,65 +10,70 @@ const programLevels = [
     level: 1,
     title: 'Business Associate',
     icon: TrendingUp,
-    duration: '3-6 Months',
-    description: 'The entry point into the ETIQU ecosystem. Develop foundational business skills, product expertise, and direct sales capabilities.',
+    duration: '3-4 Weeks',
+    description: 'The Business Associate role is the foundation of our development program, where individuals gain exposure to sales, marketing, customer interaction, and business operations through practical learning experiences.',
     outcomes: [
-      'Comprehensive product knowledge certification',
-      'Direct sales and client relationship fundamentals',
-      'Business communication and presentation skills',
-      'Revenue generation and basic financial literacy',
+      'Product & Client Training',
+      'Quality Management',
+      'Customer Interaction',
+      'System Implementation',
+      'Professional Development',
     ],
   },
   {
     level: 2,
-    title: 'Team Leader',
+    title: 'HDR Trainer',
     icon: Users,
-    duration: '6-12 Months',
-    description: 'Transition from individual contributor to team builder. Learn to recruit, train, and motivate a team of Business Associates.',
+    duration: '8-12 Weeks',
+    description: 'HRD Trainers focus on recruitment, people development, and conducting training sessions while building strong communication and leadership capabilities.',
     outcomes: [
-      'Team recruitment and onboarding strategies',
-      'Performance management and coaching techniques',
-      'Conflict resolution and team dynamics',
-      'Delegation and time management mastery',
+      'Training & Development',
+      'Recruitment Process',
+      'Team Building',
+      'Corporate Presentations',
+      'Administrative Understanding',
     ],
   },
   {
     level: 3,
-    title: 'Manager',
+    title: 'EXECUTIVE TRAINER',
     icon: Shield,
-    duration: '12-18 Months',
-    description: 'Oversee multiple teams and operational functions. Develop strategic thinking and advanced management capabilities.',
+    duration: '8-12 Weeks',
+    description: 'This role focuses on building and managing teams, motivating individuals, and developing leadership through practical team management experiences.',
     outcomes: [
-      'Multi-team operations and resource allocation',
-      'Financial planning and budget management',
-      'Market analysis and competitive strategy',
-      'Organizational behavior and change management',
+      'Team Building',
+      'Sales Management',
+      'Networking',
+      'Territory Management',
+      'Goal Setting',
     ],
   },
   {
     level: 4,
-    title: 'Director',
+    title: 'ASSISTANT MANAGER',
     icon: Crown,
-    duration: '18-24 Months',
-    description: 'Shape organizational direction at the executive level. Lead large-scale initiatives and cultivate strategic partnerships.',
+    duration: '8-12 Weeks',
+    description: 'Assistant Managers are responsible for planning, strategy implementation, people development, office administration, and overall performance management.',
     outcomes: [
-      'Executive leadership and vision development',
-      'Strategic partnership and business development',
-      'Corporate governance and compliance',
-      'Innovation management and digital transformation',
+      'Revenue Management',
+      'Planning & Strategy',
+      'Conducting Interviews',
+      'Trainer Development',
+      'Performance Monitoring',
     ],
   },
   {
     level: 5,
-    title: 'Business Owner',
+    title: 'OWNER PARTNER',
     icon: Building2,
     duration: 'Ongoing',
-    description: 'The pinnacle of the program. Operate your own enterprise with the full support of ETIQU\'s network and resources.',
+    description: 'Owner Partners lead and manage business operations while focusing on expansion, profitability, leadership, and strategic business planning.',
     outcomes: [
-      'Independent business operations and ownership',
-      'Full access to ETIQU\'s global network and resources',
-      'Ongoing mentorship from established business owners',
-      'Equity building and wealth generation pathways',
+      'Organizational Management',
+      'Business Planning',
+      'Recruitment & Administration',
+      'National & International Networking',
+      'Customer Service Strategy',
     ],
   },
 ];
@@ -76,23 +81,33 @@ const programLevels = [
 const benefits = [
   {
     icon: BookOpen,
-    title: 'Structured Curriculum',
-    description: 'A meticulously designed five-level program that builds skills progressively, ensuring readiness at every stage of your journey.',
+    title: 'ADVERTISING ',
+    description: 'Delivering creative advertising solutions for national and international brands through strategic planning, execution, and campaign management.',
   },
   {
     icon: Handshake,
-    title: 'Expert Mentorship',
-    description: 'Learn directly from professionals who have successfully navigated every level of the program and built thriving businesses.',
+    title: 'PROMOTIONS ',
+    description: 'Creating impactful promotional campaigns that build engagement, visibility, and strong customer connections.',
   },
   {
     icon: BarChart3,
-    title: 'Performance Tracking',
-    description: 'Clear metrics and milestones at every level provide transparency and motivation as you progress toward business ownership.',
+    title: 'BRANDING ',
+    description: 'Building powerful brand identities that align with business goals and create lasting market presence.',
   },
   {
     icon: Globe,
-    title: 'Global Network',
-    description: 'Join a community of over 5,000 professionals across 15 countries, creating opportunities for collaboration and growth.',
+    title: 'BUSINESS DEVELOPMENT',
+    description: 'Supporting business growth through strategic expansion, leadership development, and market-driven opportunities.',
+  },
+  {
+    icon: Users,
+    title: 'CUSTOMER ACQUISITION',
+    description: 'Helping businesses grow through targeted customer acquisition strategies designed to increase reach and conversions.',
+  },
+  {
+    icon: Shield,
+    title: 'EXPANSION',
+    description: 'Driving sustainable expansion through innovative growth strategies, operational support, and business scalability.',
   },
 ];
 
@@ -135,8 +150,8 @@ export default function Opportunity() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
             label="Five Levels to Ownership"
-            title="Your Structured Pathway"
-            description="Each level builds upon the last, creating a comprehensive foundation for business ownership that no other program offers."
+            title="YOUR CAREER JOURNEY AT ETIQU"
+            description="At ETIQU, we provide a structured Business Development Program designed to help individuals grow through leadership, management, and entrepreneurial development. Our career path offers hands-on business exposure, practical training, and performance-driven growth opportunities at every stage."
           />
 
           <div className="space-y-8">
@@ -196,30 +211,36 @@ export default function Opportunity() {
 
       <div className="section-divider" />
 
-      {/* Benefits */}
+      {/* Benefits — full width stacked, title beside icon, description on hover */}
       <section className="bg-[var(--off-white)] py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
-            label="Why ETIQU"
-            title="The Competitive Advantage"
+            title="WHAT WE DO ! "
             description="What distinguishes our program from conventional professional development offerings."
           />
 
-          <StaggerContainer className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          <StaggerContainer className="flex flex-col gap-6">
             {benefits.map((benefit) => {
               const Icon = benefit.icon;
               return (
                 <StaggerItem key={benefit.title}>
-                  <div className="bg-white p-10 border border-gray-100 hover:border-[var(--gold)]/30 transition-all duration-500 group">
-                    <div className="w-14 h-14 border border-[var(--gold)]/30 flex items-center justify-center mb-6 group-hover:bg-[var(--gold)]/10 transition-colors duration-500">
-                      <Icon size={24} className="text-[var(--gold)]" />
+                  <div className="benefits-card bg-white px-10 py-8 border border-gray-100 hover:border-[var(--gold)]/30 transition-all duration-500 group overflow-hidden">
+                    {/* Icon + Title in a row */}
+                    <div className="flex items-center gap-6">
+                      <div className="w-14 h-14 border border-[var(--gold)]/30 flex items-center justify-center shrink-0 group-hover:bg-[var(--gold)]/10 transition-colors duration-500">
+                        <Icon size={24} className="text-[var(--gold)]" />
+                      </div>
+                      <h3 className="font-playfair text-xl font-semibold text-[var(--navy)]">
+                        {benefit.title}
+                      </h3>
                     </div>
-                    <h3 className="font-playfair text-xl font-semibold text-[var(--navy)] mb-3">
-                      {benefit.title}
-                    </h3>
-                    <p className="text-sm text-gray-500 leading-relaxed">
-                      {benefit.description}
-                    </p>
+
+                    {/* Description — hidden by default, slides in on hover */}
+                    <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+                      <p className="text-sm text-gray-500 leading-relaxed mt-4 pl-20">
+                        {benefit.description}
+                      </p>
+                    </div>
                   </div>
                 </StaggerItem>
               );
