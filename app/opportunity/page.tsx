@@ -1,8 +1,8 @@
 'use client';
 
 import Link from 'next/link';
-import { ArrowRight, TrendingUp, Users, Shield, Crown, Building2, BookOpen, Handshake, ChartBar as BarChart3, Globe } from 'lucide-react';
-import { FadeIn, StaggerContainer, StaggerItem } from '@/components/fade-in';
+import { ArrowRight, TrendingUp, Users, Shield, Crown, Building2 } from 'lucide-react';
+import { FadeIn } from '@/components/fade-in';
 import { SectionHeading } from '@/components/section-heading';
 
 const programLevels = [
@@ -75,39 +75,6 @@ const programLevels = [
       'National & International Networking',
       'Customer Service Strategy',
     ],
-  },
-];
-
-const benefits = [
-  {
-    icon: BookOpen,
-    title: 'ADVERTISING ',
-    description: 'Delivering creative advertising solutions for national and international brands through strategic planning, execution, and campaign management.',
-  },
-  {
-    icon: Handshake,
-    title: 'PROMOTIONS ',
-    description: 'Creating impactful promotional campaigns that build engagement, visibility, and strong customer connections.',
-  },
-  {
-    icon: BarChart3,
-    title: 'BRANDING ',
-    description: 'Building powerful brand identities that align with business goals and create lasting market presence.',
-  },
-  {
-    icon: Globe,
-    title: 'BUSINESS DEVELOPMENT',
-    description: 'Supporting business growth through strategic expansion, leadership development, and market-driven opportunities.',
-  },
-  {
-    icon: Users,
-    title: 'CUSTOMER ACQUISITION',
-    description: 'Helping businesses grow through targeted customer acquisition strategies designed to increase reach and conversions.',
-  },
-  {
-    icon: Shield,
-    title: 'EXPANSION',
-    description: 'Driving sustainable expansion through innovative growth strategies, operational support, and business scalability.',
   },
 ];
 
@@ -206,46 +173,6 @@ export default function Opportunity() {
               );
             })}
           </div>
-        </div>
-      </section>
-
-      <div className="section-divider" />
-
-      {/* Benefits — full width stacked, title beside icon, description on hover */}
-      <section className="bg-[var(--off-white)] py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <SectionHeading
-            title="WHAT WE DO ! "
-            description="What distinguishes our program from conventional professional development offerings."
-          />
-
-          <StaggerContainer className="flex flex-col gap-6">
-            {benefits.map((benefit) => {
-              const Icon = benefit.icon;
-              return (
-                <StaggerItem key={benefit.title}>
-                  <div className="benefits-card bg-white px-10 py-8 border border-gray-100 hover:border-[var(--gold)]/30 transition-all duration-500 group overflow-hidden">
-                    {/* Icon + Title in a row */}
-                    <div className="flex items-center gap-6">
-                      <div className="w-14 h-14 border border-[var(--gold)]/30 flex items-center justify-center shrink-0 group-hover:bg-[var(--gold)]/10 transition-colors duration-500">
-                        <Icon size={24} className="text-[var(--gold)]" />
-                      </div>
-                      <h3 className="font-playfair text-xl font-semibold text-[var(--navy)]">
-                        {benefit.title}
-                      </h3>
-                    </div>
-
-                    {/* Description — hidden by default, slides in on hover */}
-                    <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 ease-in-out">
-                      <p className="text-sm text-gray-500 leading-relaxed mt-4 pl-20">
-                        {benefit.description}
-                      </p>
-                    </div>
-                  </div>
-                </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
         </div>
       </section>
 

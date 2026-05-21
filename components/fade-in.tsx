@@ -37,7 +37,7 @@ export function FadeIn({
         y: 0,
         x: 0,
       }}
-      viewport={{ once: true, margin: '-80px' }}
+      viewport={{ once: true, margin: '-50px', amount: 0.1 }}
       transition={{
         duration,
         delay,
@@ -50,16 +50,24 @@ export function FadeIn({
   );
 }
 
-export function StaggerContainer({ children, className = '' }: { children: ReactNode; className?: string }) {
+export function StaggerContainer({
+  children,
+  className = '',
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
   return (
     <motion.div
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, margin: '-80px' }}
+      viewport={{ once: true, margin: '-50px', amount: 0.1 }}
       variants={{
+        hidden: {},
         visible: {
           transition: {
             staggerChildren: 0.15,
+            delayChildren: 0.1,
           },
         },
       }}
@@ -70,7 +78,13 @@ export function StaggerContainer({ children, className = '' }: { children: React
   );
 }
 
-export function StaggerItem({ children, className = '' }: { children: ReactNode; className?: string }) {
+export function StaggerItem({
+  children,
+  className = '',
+}: {
+  children: ReactNode;
+  className?: string;
+}) {
   return (
     <motion.div
       variants={{

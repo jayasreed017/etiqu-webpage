@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
@@ -11,6 +11,7 @@ const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/about', label: 'About' },
   { href: '/opportunity', label: 'Opportunity' },
+  { href: '/What-We-Do', label: 'What We Do' },
   { href: '/gallery', label: 'Gallery' },
   { href: '/contact', label: 'Contact' },
 ];
@@ -38,6 +39,8 @@ export function Navigation() {
     >
       <nav className="max-w-7xl mx-auto px-6 lg:px-8">
         <div className="flex items-center justify-between h-20">
+
+          {/* Logo */}
           <Link href="/" className="flex items-center gap-3 group">
             <Image
               src="/logo.png"
@@ -51,6 +54,7 @@ export function Navigation() {
             </span>
           </Link>
 
+          {/* Desktop Nav */}
           <div className="hidden md:flex items-center gap-10">
             {navLinks.map((link) => (
               <Link
@@ -73,6 +77,7 @@ export function Navigation() {
             ))}
           </div>
 
+          {/* Mobile hamburger */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="md:hidden text-white p-2"
@@ -83,6 +88,7 @@ export function Navigation() {
         </div>
       </nav>
 
+      {/* Mobile Menu */}
       <AnimatePresence>
         {mobileOpen && (
           <motion.div

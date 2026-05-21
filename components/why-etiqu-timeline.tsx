@@ -1,7 +1,5 @@
 'use client';
 
-import { useRef } from 'react';
-
 const items = [
   {
     number: '01',
@@ -36,24 +34,30 @@ const items = [
 ];
 
 export function WhyEtiquTimeline() {
-  const containerRef = useRef<HTMLDivElement>(null);
-
   return (
-    <div className="relative w-full overflow-hidden" ref={containerRef}>
+    <div className="relative w-full">
 
-      {/* Horizontal Line - Desktop only, scoped inside container */}
+      {/* ── Desktop: horizontal line through circle centres ── */}
       <div className="hidden xl:block absolute top-12 left-[calc(100%/12)] right-[calc(100%/12)] h-px bg-white/20 z-0" />
 
-      {/* Items */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-14 xl:gap-6 relative z-10">
-        {items.map((item) => (
+      {/* ── Items grid ── */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-0 xl:gap-6 relative z-10">
+        {items.map((item, i) => (
           <div
             key={item.number}
-            className="text-center group cursor-pointer"
+            className="relative flex flex-col items-center text-center group cursor-pointer px-4 pb-14 xl:pb-0"
           >
+
+            {/* ── Vertical connector line (mobile / tablet only) ──
+                Sits behind the circle, runs from top of card down to
+                the next card's circle. Hidden on xl. */}
+            {i < items.length - 1 && (
+              <div className="xl:hidden absolute left-1/2 -translate-x-1/2 top-24 bottom-0 w-px bg-white/20 z-0" />
+            )}
+
             {/* Circle */}
             <div
-              className="w-24 h-24 mx-auto rounded-full border-2 border-white/40 text-white
+              className="relative z-10 w-24 h-24 rounded-full border-2 border-white/40 text-white
                 flex items-center justify-center text-3xl font-bold
                 transition-all duration-300
                 group-hover:border-[var(--gold)] group-hover:text-[var(--gold)] group-hover:bg-[var(--gold)]/10"
@@ -74,6 +78,7 @@ export function WhyEtiquTimeline() {
             <p className="text-white/60 text-sm leading-7">
               {item.description}
             </p>
+
           </div>
         ))}
       </div>
