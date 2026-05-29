@@ -36,7 +36,7 @@ const programLevels = [
   },
   {
     level: 3,
-    title: 'EXECUTIVE TRAINER',
+    title: 'Executive Manager',
     icon: Shield,
     duration: '8-12 Weeks',
     description: 'This role focuses on building and managing teams, motivating individuals, and developing leadership through practical team management experiences.',
@@ -50,7 +50,7 @@ const programLevels = [
   },
   {
     level: 4,
-    title: 'ASSISTANT MANAGER',
+    title: 'Assistant Manager',
     icon: Crown,
     duration: '8-12 Weeks',
     description: 'Assistant Managers are responsible for planning, strategy implementation, people development, office administration, and overall performance management.',
@@ -64,7 +64,7 @@ const programLevels = [
   },
   {
     level: 5,
-    title: 'OWNER PARTNER',
+    title: 'Owner Partner',
     icon: Building2,
     duration: 'Ongoing',
     description: 'Owner Partners lead and manage business operations while focusing on expansion, profitability, leadership, and strategic business planning.',
@@ -75,6 +75,34 @@ const programLevels = [
       'National & International Networking',
       'Customer Service Strategy',
     ],
+  },
+  {
+    level: 6,
+    title: 'Assistant Business Owner',
+    icon: Crown,
+    duration: 'Ongoing',
+    description: 'Assistant Business Owners work under the guidance of experienced owners, gaining hands-on experience in business management and strategic decision-making.',
+    outcomes: [
+      'Business Strategy',
+      'Financial Management',
+      'Team Leadership',
+      'Market Expansion',
+      'Sustainable Growth',
+    ],  
+  },
+  {
+    level: 7,
+    title: 'Business Head',
+    icon: Building2,
+    duration: 'Ongoing',
+    description: 'Business Heads lead and manage business units, focusing on strategic leadership, operational excellence, and business growth.',
+    outcomes: [
+      'Regional Strategy',
+      'Operational Management',
+      'Leadership Development',
+      'Market Analysis',
+      'Regional Expansion',
+    ],  
   },
 ];
 
