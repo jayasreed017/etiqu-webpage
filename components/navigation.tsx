@@ -54,28 +54,35 @@ export function Navigation() {
             </span>
           </Link>
 
-          {/* Desktop Nav */}
-          <div className="hidden md:flex items-center gap-10">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`relative text-sm tracking-widest uppercase transition-colors duration-300 ${
-                  pathname === link.href
-                    ? 'text-[var(--gold)]'
-                    : 'text-white/80 hover:text-[var(--gold)]'
-                }`}
-              >
-                {link.label}
-                {pathname === link.href && (
-                  <motion.div
-                    layoutId="nav-underline"
-                    className="absolute -bottom-1 left-0 right-0 h-[1px] bg-[var(--gold)]"
-                  />
-                )}
-              </Link>
-            ))}
-          </div>
+{/* Desktop Nav */}
+<div className="hidden md:flex items-center gap-10">
+  {navLinks.map((link) => (
+    <Link
+      key={link.href}
+      href={link.href}
+      prefetch={true}
+      className={`relative text-sm tracking-widest uppercase transition-colors duration-200 ${
+        pathname === link.href
+          ? 'text-[var(--gold)]'
+          : 'text-white/80 hover:text-[var(--gold)]'
+      }`}
+    >
+      {link.label}
+
+      {pathname === link.href && (
+        <motion.div
+          layoutId="nav-underline"
+          transition={{
+            type: 'spring',
+            stiffness: 700,
+            damping: 35,
+          }}
+          className="absolute -bottom-1 left-0 right-0 h-[2px] bg-[var(--gold)]"
+        />
+      )}
+    </Link>
+  ))}
+</div>
 
           {/* Mobile hamburger */}
           <button

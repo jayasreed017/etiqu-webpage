@@ -18,25 +18,25 @@ const stats = [
 const pillars = [
   {
     icon: Award,
-    title: 'PERFORMANCE-BASED PROMOTIONS',
+    title: 'Performance-Based Growth',
     description:
       'At ETIQU, growth is driven by performance, consistency, and leadership potential. Individuals who demonstrate strong results are provided with faster career advancement opportunities.',
   },
   {
     icon: Target,
-    title: 'LEADERSHIP DEVELOPMENT',
+    title: 'Leadership Development',
     description:
       'We focus on building future leaders by developing communication, management, presentation, and decision-making skills through structured training programs.',
   },
   {
     icon: Users,
-    title: 'BUSINESS EXPOSURE',
+    title: 'Business Exposure',
     description:
       'Gain practical experience by working with dynamic teams, interacting with clients, and understanding real-world business operations and marketing strategies.',
   },
   {
     icon: Users,
-    title: 'TRAVEL & NETWORKING OPPORTUNITIES',
+    title: 'Travel & Networking Opportunities',
     description:
       'Get opportunities for professional travel, networking events, and business development programs that expand exposure and confidence.',
   },
@@ -153,7 +153,7 @@ export default function Home() {
         Why Choose ETIQU
       </span>
       <h2 className="font-playfair text-4xl md:text-6xl text-white mt-5">
-        WHY ETIQU
+        Why Etiqu
       </h2>
     </div>
 
@@ -190,7 +190,7 @@ export default function Home() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
             label="Our Foundation"
-            title="GROWTH OPPORTUNITIES"
+            title="Growth Opportunities"
             description="Four pillars define our approach to professional development and set ETIQU apart as a leader in entrepreneurial education."
           />
 
@@ -257,7 +257,7 @@ export default function Home() {
 
           <FadeIn delay={0.1}>
             <h2 className="font-playfair text-3xl md:text-4xl lg:text-5xl font-semibold text-white leading-tight mb-6">
-              ACCELERATING CAREER GROWTH
+              Accelerating Career Growth
             </h2>
           </FadeIn>
 

@@ -119,40 +119,88 @@ export default function WhatWeDo() {
         </div>
       </section>
 
-      {/* What We Do */}
-      <section className="bg-[var(--off-white)] py-24">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <SectionHeading
-            label="Our Services"
-            title="WHAT WE DO"
-            description="What distinguishes our program from conventional professional development offerings."
-          />
-          <StaggerContainer className="flex flex-col gap-6">
-            {benefits.map((benefit) => {
-              const Icon = benefit.icon;
-              return (
-                <StaggerItem key={benefit.title}>
-                  <div className="benefits-card bg-white px-10 py-8 border border-gray-100 hover:border-[var(--gold)]/30 transition-all duration-500 group overflow-hidden">
-                    <div className="flex items-center gap-6">
-                      <div className="w-14 h-14 border border-[var(--gold)]/30 flex items-center justify-center shrink-0 group-hover:bg-[var(--gold)]/10 transition-colors duration-500">
-                        <Icon size={24} className="text-[var(--gold)]" />
-                      </div>
-                      <h3 className="font-playfair text-xl font-semibold text-[var(--navy)]">
-                        {benefit.title}
-                      </h3>
+{/* What We Do */}
+<section className="bg-[var(--off-white)] py-24">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+    <SectionHeading
+      label="Our Services"
+      title="What We Do"
+      description="What distinguishes our program from conventional professional development offerings."
+    />
+
+    <div className="grid lg:grid-cols-2 gap-12 items-start">
+
+      {/* Services */}
+      <div>
+        <StaggerContainer className="flex flex-col gap-6">
+          {benefits.map((benefit) => {
+            const Icon = benefit.icon;
+
+            return (
+              <StaggerItem key={benefit.title}>
+                <div className="benefits-card bg-white px-10 py-8 border border-gray-100 hover:border-[var(--gold)]/30 transition-all duration-500 group overflow-hidden">
+
+                  <div className="flex items-center gap-6">
+                    <div className="w-14 h-14 border border-[var(--gold)]/30 flex items-center justify-center shrink-0 group-hover:bg-[var(--gold)]/10 transition-colors duration-500">
+                      <Icon
+                        size={24}
+                        className="text-[var(--gold)]"
+                      />
                     </div>
-                    <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 ease-in-out">
-                      <p className="text-sm text-gray-500 leading-relaxed mt-4 pl-20">
-                        {benefit.description}
-                      </p>
-                    </div>
+
+                    <h3 className="font-playfair text-xl font-semibold text-[var(--navy)]">
+                      {benefit.title}
+                    </h3>
                   </div>
-                </StaggerItem>
-              );
-            })}
-          </StaggerContainer>
+
+                  <div className="max-h-0 overflow-hidden opacity-0 group-hover:max-h-40 group-hover:opacity-100 transition-all duration-500 ease-in-out">
+                    <p className="text-sm text-gray-500 leading-relaxed mt-4 pl-20">
+                      {benefit.description}
+                    </p>
+                  </div>
+
+                </div>
+              </StaggerItem>
+            );
+          })}
+        </StaggerContainer>
+      </div>
+
+      {/* Right Side Images */}
+      <div className="flex flex-col gap-6">
+
+        {/* Image 1 */}
+        <div className="group overflow-hidden rounded-2xl shadow-xl">
+          <img
+            src="/services/service-2.jpg"
+            alt="Advertising & Branding"
+            className="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-105"
+          />
         </div>
-      </section>
+
+        {/* Image 2 */}
+        <div className="group overflow-hidden rounded-2xl shadow-xl">
+          <img
+            src="/services/service-1.jpg"
+            alt="Business Development"
+            className="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </div>
+
+        {/* Image 3 */}
+        <div className="group overflow-hidden rounded-2xl shadow-xl">
+          <img
+            src="/services/service-3.jpg"
+            alt="Expansion"
+            className="w-full h-[300px] object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+</section>
 
       <div className="section-divider" />
 {/* National Clients */}
@@ -160,7 +208,7 @@ export default function WhatWeDo() {
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
     <SectionHeading
       label="Within India"
-      title="NATIONAL CLIENTS"
+      title="National Clients"
       description="After establishing in India we have had a wide spread of clients. The most noticeable ones are."
     />
     <div className="flex flex-col lg:flex-row gap-10 items-center">
@@ -192,7 +240,7 @@ export default function WhatWeDo() {
   <div className="max-w-7xl mx-auto px-6 lg:px-8">
     <SectionHeading
       label="Around The World"
-      title="INTERNATIONAL CLIENTS"
+      title="International Clients"
       description="Since our roots are from an international base — here are a few clients that best showcase our work."
     />
     <div className="flex flex-col lg:flex-row-reverse gap-10 items-center">

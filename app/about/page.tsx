@@ -44,12 +44,12 @@ const timelineEvents = [
 
 const values = [
   {
-    title: 'OUR VISION',
+    title: 'Our Vision',
     description:
       'Our vision is to inspire individuals to become the best version of themselves through leadership, growth, and continuous development. We aim to expand across new cities and divisions while creating greater career and growth opportunities for our people through strong client partnerships and business excellence.',
   },
   {
-    title: 'OUR MISSION',
+    title: 'Our Mission',
     description:
       'Our mission is to provide individuals with a unique platform for personal and professional growth through one of the most progressive development programs in the industry. We are committed to empowering people with the skills, experience, and opportunities needed to achieve success in both their careers and personal goals.',
   },
@@ -59,7 +59,7 @@ const team = [
   {
     image: '/team2.jpg',
     name: 'Mr. Bala Krishnan K',
-    role: 'MD OF Garuda Inc, Madurai',
+    role: 'Owner of Cameo Inc, Madurai',
   },
   {
     image: '/team1.jpg',
@@ -69,11 +69,11 @@ const team = [
   {
     image: '/team3.jpg',
     name: 'Mr. Karthikeyan',
-    role: 'Asst. Owner of Cameo Inc.',
+    role: 'MD OF Garuda Inc, Madurai',
   },
   {
-    image: '/team4.jpg',
-    name: 'Mr. Dheepak Kumar G B',
+    image: '/team6.jpg',
+    name: 'Mr. Narayanan A',
     role: 'Crew Leader of Etiqu, Trichy',
   },
   {
@@ -82,8 +82,8 @@ const team = [
     role: 'Crew Leader of Etiqu, Trichy',
   },
   {
-    image: '/team6.jpg',
-    name: 'Mr. Narayanan A',
+    image: '/team4.jpg',
+    name: 'Mr. Dheepak Kumar G B',
     role: 'Crew Leader of Etiqu, Trichy',
   },
 ];
@@ -111,7 +111,7 @@ export default function About() {
 
           <FadeIn delay={0.1}>
             <h1 className="font-playfair text-4xl sm:text-5xl md:text-6xl font-semibold text-white leading-tight mb-6">
-              BUILDING FUTURE LEADERS
+              Building Future Leaders
             </h1>
           </FadeIn>
 
@@ -279,7 +279,7 @@ export default function About() {
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
           <SectionHeading
             label="About Us"
-            title="MEET OUR TEAM"
+            title="Meet Our Team"
             description="The passionate individuals driving ETIQU's vision forward."
           />
 

@@ -33,15 +33,15 @@ export function Footer() {
             <ul className="space-y-4">
               <li className="flex items-start gap-3">
                 <MapPin size={16} className="text-[var(--gold)] mt-0.5 shrink-0" />
-                <span className="text-sm text-white/50">123 Business Avenue, Suite 400<br />New York, NY 10001</span>
+                <span className="text-sm text-white/50">Etiqu No 30, 3rd floor,Tamara Towers, Above Hdfc Bank, Vayalur Road, Srinivasa Nagar , Trichy -17</span>
               </li>
               <li className="flex items-center gap-3">
                 <Phone size={16} className="text-[var(--gold)] shrink-0" />
-                <span className="text-sm text-white/50">+1 (555) 123-4567</span>
+                <span className="text-sm text-white/50">+91 7010515019</span>
               </li>
               <li className="flex items-center gap-3">
                 <Mail size={16} className="text-[var(--gold)] shrink-0" />
-                <span className="text-sm text-white/50">info@etiqu.com</span>
+                <span className="text-sm text-white/50">hretiquteam@gmail.com</span>
               </li>
             </ul>
           </div>

@@ -5,59 +5,82 @@ import { SectionHeading } from '@/components/section-heading';
 
 const galleryItems = [
   {
-    src: 'https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Team collaboration in modern office',
+    src: '/gallery/img6.jpg',
     span: 'col-span-1 md:col-span-2 row-span-1 md:row-span-2',
-    category: 'Training',
   },
   {
-    src: 'https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Professional business conference',
+    src: '/gallery/img2.jpg',
     span: 'col-span-1 row-span-1',
-    category: 'Events',
   },
   {
-    src: 'https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Leadership seminar presentation',
+    src: '/gallery/img1.jpg',
     span: 'col-span-1 row-span-1',
-    category: 'Leadership',
   },
   {
-    src: 'https://images.pexels.com/photos/3184296/pexels-photo-3184296.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Business networking event',
+    src: '/gallery/img3.jpg',
     span: 'col-span-1 md:col-span-2 row-span-1',
-    category: 'Networking',
   },
   {
-    src: 'https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Team strategy meeting',
+    src: '/gallery/img5.jpg',
     span: 'col-span-1 row-span-1',
-    category: 'Strategy',
   },
   {
-    src: 'https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Professional development workshop',
+    src: '/gallery/img13.jpg',
     span: 'col-span-1 row-span-1',
-    category: 'Workshops',
   },
   {
-    src: 'https://images.pexels.com/photos/3184320/pexels-photo-3184320.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Graduation ceremony celebration',
-    span: 'col-span-1 md:col-span-2 row-span-1',
-    category: 'Graduation',
+    src: '/gallery/img7.jpg',
+    span: 'col-span-1 row-span-2',
   },
   {
-    src: 'https://images.pexels.com/photos/3182786/pexels-photo-3182786.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Mentorship session',
+    src: '/gallery/img8.jpg',
     span: 'col-span-1 row-span-1',
-    category: 'Mentorship',
   },
   {
-    src: 'https://images.pexels.com/photos/3183186/pexels-photo-3183186.jpeg?auto=compress&cs=tinysrgb&w=800',
-    alt: 'Global summit keynote',
-    span: 'col-span-1 row-span-1',
-    category: 'Summit',
+    src: '/gallery/img9.jpg',
+    span: 'col-span-2 row-span-1',
   },
+  {
+    src: '/gallery/img10.jpg',
+    span: 'col-span-1 row-span-1',
+  },
+  {
+    src: '/gallery/img11.jpg',
+    span: 'col-span-1 row-span-1',
+  },
+  {
+    src: '/gallery/img12.jpg',
+    span: 'col-span-1 row-span-1',
+  },
+  {
+    src: '/gallery/img4.jpg',
+    span: 'col-span-2 row-span-1',
+  },
+  {
+    src: '/gallery/img14.jpg',
+    span: 'col-span-1 row-span-1',
+  },
+  {
+    src: '/gallery/img15.jpg',
+    span: 'col-span-1 row-span-1',
+  },
+  {
+    src: '/gallery/img16.jpg',
+    span: 'col-span-2 row-span-1',
+  },
+  {
+    src: '/gallery/img17.jpg',
+    span: 'col-span-1 row-span-1',
+  },
+  {
+    src: '/gallery/img18.jpg',
+    span: 'col-span-2 row-span-1',
+  },
+  {
+    src: '/gallery/img20.jpg',
+    span: 'col-span-1 row-span-1',
+  },
+
 ];
 
 export default function Gallery() {
@@ -111,18 +134,6 @@ export default function Gallery() {
                     style={{ backgroundImage: `url('${item.src}')` }}
                   />
                   <div className="absolute inset-0 bg-[var(--navy)]/40 group-hover:bg-[var(--navy)]/60 transition-colors duration-500" />
-
-                  {/* Category label */}
-                  <div className="absolute top-4 left-4 z-10">
-                    <span className="inline-block bg-[var(--gold)] text-white text-[10px] tracking-[0.2em] uppercase font-semibold px-3 py-1">
-                      {item.category}
-                    </span>
-                  </div>
-
-                  {/* Hover overlay */}
-                  <div className="absolute inset-0 flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
-                    <p className="text-white text-sm font-medium">{item.alt}</p>
-                  </div>
                 </div>
               </StaggerItem>
             ))}

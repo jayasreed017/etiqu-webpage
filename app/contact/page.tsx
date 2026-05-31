@@ -9,22 +9,17 @@ const contactInfo = [
   {
     icon: MapPin,
     title: 'Visit Us',
-    lines: ['123 Business Avenue, Suite 400', 'New York, NY 10001'],
+    lines: ['Etiqu No 30, 3rd floor,Tamara Towers, Above Hdfc Bank, Vayalur Road, Srinivasa Nagar , Trichy -17'],
   },
   {
     icon: Phone,
     title: 'Call Us',
-    lines: ['+1 (555) 123-4567', '+1 (555) 987-6543'],
+    lines: ['+91 7010515019 ', '+91 8667801887'],
   },
   {
     icon: Mail,
     title: 'Email Us',
-    lines: ['info@etiqu.com', 'admissions@etiqu.com'],
-  },
-  {
-    icon: Clock,
-    title: 'Office Hours',
-    lines: ['Monday - Friday: 9:00 AM - 6:00 PM', 'Saturday: 10:00 AM - 2:00 PM'],
+    lines: ['hretiquteam@gmail.com'],
   },
 ];
 
@@ -108,7 +103,6 @@ export default function Contact() {
                         value={formData.firstName}
                         onChange={handleChange}
                         className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[var(--gold)] transition-colors duration-300"
-                        placeholder="John"
                       />
                     </div>
                     <div>
@@ -121,7 +115,6 @@ export default function Contact() {
                         value={formData.lastName}
                         onChange={handleChange}
                         className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[var(--gold)] transition-colors duration-300"
-                        placeholder="Doe"
                       />
                     </div>
                   </div>
@@ -137,7 +130,6 @@ export default function Contact() {
                         value={formData.email}
                         onChange={handleChange}
                         className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[var(--gold)] transition-colors duration-300"
-                        placeholder="john@example.com"
                       />
                     </div>
                     <div>
@@ -150,7 +142,6 @@ export default function Contact() {
                         value={formData.phone}
                         onChange={handleChange}
                         className="w-full border border-gray-200 px-4 py-3 text-sm focus:outline-none focus:border-[var(--gold)] transition-colors duration-300"
-                        placeholder="+1 (555) 000-0000"
                       />
                     </div>
                   </div>
@@ -231,29 +222,24 @@ export default function Contact() {
 
       <div className="section-divider" />
 
-      {/* Map Placeholder */}
-      <section className="bg-[var(--off-white)]">
-        <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
-          <FadeIn>
-            <div className="relative w-full h-[400px] bg-gray-200 border border-gray-200 overflow-hidden">
-              <div
-                className="absolute inset-0 bg-cover bg-center"
-                style={{
-                  backgroundImage: "url('https://images.pexels.com/photos/466685/pexels-photo-466685.jpeg?auto=compress&cs=tinysrgb&w=1920')",
-                }}
-              />
-              <div className="absolute inset-0 bg-[var(--navy)]/20" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin size={40} className="text-[var(--gold)] mx-auto mb-3" />
-                  <p className="font-playfair text-xl font-semibold text-white">123 Business Avenue, Suite 400</p>
-                  <p className="text-sm text-white/70 mt-1">New York, NY 10001</p>
-                </div>
-              </div>
-            </div>
-          </FadeIn>
-        </div>
-      </section>
+{/* Google Map */}
+<section className="bg-[var(--off-white)]">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8 py-16">
+    <FadeIn>
+      <div className="overflow-hidden rounded-xl shadow-lg border border-gray-200">
+        <iframe
+          src="https://www.google.com/maps?q=Etiqu+Asia+Office+Trichy&output=embed"
+          width="100%"
+          height="450"
+          style={{ border: 0 }}
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          allowFullScreen
+        />
+      </div>
+    </FadeIn>
+  </div>
+</section>
     </>
   );
 }
