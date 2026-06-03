@@ -318,6 +318,86 @@ export default function Opportunity() {
         </div>
       </section>
 
+{/* Etiqu Advantage Certification Program */}
+<section className="bg-[var(--off-white)] py-24">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <FadeIn>
+      <div className="text-center mb-12">
+        <h2 className="font-playfair text-4xl md:text-5xl font-semibold text-[var(--navy)]">
+          Etiqu Advantage Certification Program
+        </h2>
+      </div>
+    </FadeIn>
+
+    <FadeIn delay={0.2}>
+      <div className="bg-white rounded-2xl shadow-xl p-10">
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+
+          {/* First 30 Days */}
+          <div>
+            <h3 className="text-3xl font-bold text-[var(--navy)] mb-8 text-center">
+              First 30 Days in Business
+            </h3>
+
+            <ul className="space-y-5 text-center">
+              <li className="text-lg text-gray-700">› Smart Selling</li>
+              <li className="text-lg text-gray-700">› Business Communication</li>
+              <li className="text-lg text-gray-700">› Brand Promotions</li>
+              <li className="text-lg text-gray-700">› Confidence Enhancement</li>
+              <li className="text-lg text-gray-700">› Time Management</li>
+              <li className="text-lg text-gray-700">› Market Analysis</li>
+              <li className="text-lg text-gray-700">› Customer Service</li>
+              <li className="text-lg text-gray-700">› Quality Management</li>
+              <li className="text-lg text-gray-700">› Public Speaking</li>
+              <li className="text-lg text-gray-700">› Client Representation</li>
+            </ul>
+          </div>
+
+          {/* First 75 Days */}
+          <div>
+            <h3 className="text-3xl font-bold text-[var(--navy)] mb-8 text-center">
+              First 75 Days in Business
+            </h3>
+
+            <ul className="space-y-5 text-center">
+              <li className="text-lg text-gray-700">› Training and Development</li>
+              <li className="text-lg text-gray-700">› Sales Analysis</li>
+              <li className="text-lg text-gray-700">› Individual Financial Management</li>
+              <li className="text-lg text-gray-700">› New Customer Acquisition</li>
+              <li className="text-lg text-gray-700">› Self-Assessment</li>
+              <li className="text-lg text-gray-700">› Facilitation Skills</li>
+              <li className="text-lg text-gray-700">› Level-1 Recruitment</li>
+              <li className="text-lg text-gray-700">› Brand Awareness</li>
+            </ul>
+          </div>
+
+          {/* First 120 Days */}
+          <div>
+            <h3 className="text-3xl font-bold text-[var(--navy)] mb-8 text-center">
+              First 120 Days in Business
+            </h3>
+
+            <ul className="space-y-5 text-center">
+              <li className="text-lg text-gray-700">› Team Management</li>
+              <li className="text-lg text-gray-700">› Performance Accountability</li>
+              <li className="text-lg text-gray-700">› Sales Strategy</li>
+              <li className="text-lg text-gray-700">› Team Profitability</li>
+              <li className="text-lg text-gray-700">› Business Strategy Planning</li>
+              <li className="text-lg text-gray-700">› Decision Making Skills</li>
+              <li className="text-lg text-gray-700">› Comparative Analysis</li>
+            </ul>
+          </div>
+
+        </div>
+
+      </div>
+    </FadeIn>
+
+  </div>
+</section>
+
       {/* CTA Section */}
       <section className="bg-[var(--navy)] py-24">
         <div className="max-w-3xl mx-auto px-6 text-center">

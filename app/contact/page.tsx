@@ -76,7 +76,7 @@ export default function Contact() {
       {/* Contact Form + Info */}
       <section className="bg-white py-24">
         <div className="max-w-7xl mx-auto px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16">
+          <div className="grid grid-cols-1 lg:grid-cols-5 gap-16 items-center">
             {/* Form */}
             <div className="lg:col-span-3">
               <FadeIn>
