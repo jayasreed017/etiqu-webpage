@@ -331,68 +331,189 @@ export default function Opportunity() {
     </FadeIn>
 
     <FadeIn delay={0.2}>
-      <div className="bg-white rounded-2xl shadow-xl p-10">
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
+      {/* Gradient Border */}
+      <div className="relative p-[2px] rounded-3xl bg-gradient-to-r from-[var(--gold)] via-[var(--navy)] to-[var(--gold)]">
 
-          {/* First 30 Days */}
-          <div>
-            <h3 className="text-3xl font-bold text-[var(--navy)] mb-8 text-center">
-              First 30 Days in Business
-            </h3>
+        {/* Main Box */}
+        <div
+          className="
+            group
+            bg-white
+            rounded-3xl
+            p-10
+            md:p-14
+            shadow-xl
+            transition-all
+            duration-500
+            hover:shadow-[0_20px_60px_rgba(212,175,55,0.25)]
+          "
+        >
 
-            <ul className="space-y-5 text-center">
-              <li className="text-lg text-gray-700">› Smart Selling</li>
-              <li className="text-lg text-gray-700">› Business Communication</li>
-              <li className="text-lg text-gray-700">› Brand Promotions</li>
-              <li className="text-lg text-gray-700">› Confidence Enhancement</li>
-              <li className="text-lg text-gray-700">› Time Management</li>
-              <li className="text-lg text-gray-700">› Market Analysis</li>
-              <li className="text-lg text-gray-700">› Customer Service</li>
-              <li className="text-lg text-gray-700">› Quality Management</li>
-              <li className="text-lg text-gray-700">› Public Speaking</li>
-              <li className="text-lg text-gray-700">› Client Representation</li>
-            </ul>
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-          {/* First 75 Days */}
-          <div>
-            <h3 className="text-3xl font-bold text-[var(--navy)] mb-8 text-center">
-              First 75 Days in Business
-            </h3>
+            {/* First 30 Days */}
+            <div className="text-center">
 
-            <ul className="space-y-5 text-center">
-              <li className="text-lg text-gray-700">› Training and Development</li>
-              <li className="text-lg text-gray-700">› Sales Analysis</li>
-              <li className="text-lg text-gray-700">› Individual Financial Management</li>
-              <li className="text-lg text-gray-700">› New Customer Acquisition</li>
-              <li className="text-lg text-gray-700">› Self-Assessment</li>
-              <li className="text-lg text-gray-700">› Facilitation Skills</li>
-              <li className="text-lg text-gray-700">› Level-1 Recruitment</li>
-              <li className="text-lg text-gray-700">› Brand Awareness</li>
-            </ul>
-          </div>
+              <h3
+                className="
+                  text-3xl
+                  font-bold
+                  text-[var(--navy)]
+                  mb-8
+                  transition-all
+                  duration-300
+                  hover:text-[var(--gold)]
+                "
+              >
+                First 30 Days in Business
+              </h3>
 
-          {/* First 120 Days */}
-          <div>
-            <h3 className="text-3xl font-bold text-[var(--navy)] mb-8 text-center">
-              First 120 Days in Business
-            </h3>
+              <div className="w-32 h-[2px] bg-[var(--gold)] mx-auto mb-8"></div>
 
-            <ul className="space-y-5 text-center">
-              <li className="text-lg text-gray-700">› Team Management</li>
-              <li className="text-lg text-gray-700">› Performance Accountability</li>
-              <li className="text-lg text-gray-700">› Sales Strategy</li>
-              <li className="text-lg text-gray-700">› Team Profitability</li>
-              <li className="text-lg text-gray-700">› Business Strategy Planning</li>
-              <li className="text-lg text-gray-700">› Decision Making Skills</li>
-              <li className="text-lg text-gray-700">› Comparative Analysis</li>
-            </ul>
+              <ul className="space-y-5">
+
+                {[
+                  "Smart Selling",
+                  "Business Communication",
+                  "Brand Promotions",
+                  "Confidence Enhancement",
+                  "Time Management",
+                  "Market Analysis",
+                  "Customer Service",
+                  "Quality Management",
+                  "Public Speaking",
+                  "Client Representation",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="
+                      text-lg
+                      text-gray-700
+                      cursor-pointer
+                      transition-all
+                      duration-300
+                      hover:text-[var(--gold)]
+                      hover:translate-x-2
+                      hover:font-medium
+                    "
+                  >
+                    › {item}
+                  </li>
+                ))}
+
+              </ul>
+            </div>
+
+            {/* Divider */}
+            <div className="hidden md:block absolute left-1/3 top-24 bottom-24 w-px bg-gray-200"></div>
+
+            {/* First 75 Days */}
+            <div className="text-center">
+
+              <h3
+                className="
+                  text-3xl
+                  font-bold
+                  text-[var(--navy)]
+                  mb-8
+                  transition-all
+                  duration-300
+                  hover:text-[var(--gold)]
+                "
+              >
+                First 75 Days in Business
+              </h3>
+
+              <div className="w-32 h-[2px] bg-[var(--gold)] mx-auto mb-8"></div>
+
+              <ul className="space-y-5">
+
+                {[
+                  "Training and Development",
+                  "Sales Analysis",
+                  "Individual Financial Management",
+                  "New Customer Acquisition",
+                  "Self-Assessment",
+                  "Facilitation Skills",
+                  "Level-1 Recruitment",
+                  "Brand Awareness",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="
+                      text-lg
+                      text-gray-700
+                      cursor-pointer
+                      transition-all
+                      duration-300
+                      hover:text-[var(--gold)]
+                      hover:translate-x-2
+                      hover:font-medium
+                    "
+                  >
+                    › {item}
+                  </li>
+                ))}
+
+              </ul>
+            </div>
+
+            {/* First 120 Days */}
+            <div className="text-center">
+
+              <h3
+                className="
+                  text-3xl
+                  font-bold
+                  text-[var(--navy)]
+                  mb-8
+                  transition-all
+                  duration-300
+                  hover:text-[var(--gold)]
+                "
+              >
+                First 120 Days in Business
+              </h3>
+
+              <div className="w-32 h-[2px] bg-[var(--gold)] mx-auto mb-8"></div>
+
+              <ul className="space-y-5">
+
+                {[
+                  "Team Management",
+                  "Performance Accountability",
+                  "Sales Strategy",
+                  "Team Profitability",
+                  "Business Strategy Planning",
+                  "Decision Making Skills",
+                  "Comparative Analysis",
+                ].map((item) => (
+                  <li
+                    key={item}
+                    className="
+                      text-lg
+                      text-gray-700
+                      cursor-pointer
+                      transition-all
+                      duration-300
+                      hover:text-[var(--gold)]
+                      hover:translate-x-2
+                      hover:font-medium
+                    "
+                  >
+                    › {item}
+                  </li>
+                ))}
+
+              </ul>
+            </div>
+
           </div>
 
         </div>
-
       </div>
+
     </FadeIn>
 
   </div>
