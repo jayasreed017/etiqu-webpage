@@ -517,6 +517,194 @@ export default function Opportunity() {
     </FadeIn>
 
   </div>
+
+ {/* Etiqu Certified Entrepreneurship Program */}
+<section className="bg-white py-24">
+  <div className="max-w-7xl mx-auto px-6 lg:px-8">
+
+    <FadeIn>
+      <div className="text-center mb-16">
+        <span className="text-[var(--gold)] uppercase tracking-[0.3em] text-sm font-semibold">
+          Career Path
+        </span>
+
+        <h2 className="font-playfair text-4xl md:text-5xl font-semibold text-[var(--navy)] mt-4">
+          Etiqu Certified Entrepreneurship Program
+        </h2>
+
+        <p className="text-gray-500 mt-4 max-w-2xl mx-auto">
+          A practical development program designed to build leadership,
+          strategic thinking, management expertise and entrepreneurial skills.
+        </p>
+      </div>
+    </FadeIn>
+
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+      {[
+        {
+          title: "Training & Development",
+          image: "/entrepreneurship/training.jpg",
+        },
+        {
+          title: "Advanced Strategic Thinking",
+          image: "/entrepreneurship/strategy.jpg",
+        },
+        {
+          title: "Project Management",
+          image: "/entrepreneurship/project.jpg",
+        },
+        {
+          title: "Strategic Brand Management",
+          image: "/entrepreneurship/brand.jpg",
+        },
+        {
+          title: "Business Expansion",
+          image: "/entrepreneurship/business.jpg",
+        },
+        {
+          title: "Financial Budgeting & Analysis",
+          image: "/entrepreneurship/finance.jpg",
+        },
+        {
+          title: "Business Networking",
+          image: "/entrepreneurship/network.jpg",
+        },
+        {
+          title: "Performance-led HR",
+          image: "/entrepreneurship/hr.jpg",
+        },
+        {
+          title: "New Venture Creation",
+          image: "/entrepreneurship/venture.jpg",
+        },
+      ].map((item, index) => (
+        <FadeIn key={index} delay={index * 0.05}>
+          <div
+            className="
+              group
+              relative
+              overflow-hidden
+              rounded-[24px]
+              h-[320px]
+              cursor-pointer
+              shadow-lg
+              hover:shadow-2xl
+              transition-all
+              duration-500
+            "
+          >
+            {/* Background Image */}
+<Image
+  src={item.image}
+  alt={item.title}
+  fill
+  quality={100}
+  sizes="(max-width: 768px) 100vw, 33vw"
+  className="
+    absolute
+    inset-0
+    object-cover
+    object-center
+  "
+/>
+
+            {/* Dark Overlay */}
+            <div
+              className="
+                absolute
+                inset-0
+                bg-[var(--navy)]/45
+                group-hover:bg-[var(--navy)]/70
+                transition-all
+                duration-500
+              "
+            />
+
+            {/* Number Badge */}
+            <div
+              className="
+                absolute
+                top-5
+                left-5
+                w-12
+                h-12
+                rounded-full
+                bg-white
+                flex
+                items-center
+                justify-center
+                font-bold
+                text-[var(--navy)]
+                shadow-lg
+                z-20
+              "
+            >
+              {index + 1}
+            </div>
+
+            {/* Content */}
+            <div
+              className="
+                absolute
+                inset-0
+                flex
+                items-center
+                justify-center
+                text-center
+                px-8
+                z-20
+              "
+            >
+              <div>
+<h3
+  className="
+    text-white
+    text-2xl
+    font-bold
+    leading-tight
+    drop-shadow-[0_3px_8px_rgba(0,0,0,0.8)]
+  "
+>
+                  {item.title}
+                </h3>
+
+                <div
+                  className="
+                    mx-auto
+                    mt-4
+                    h-[3px]
+                    w-0
+                    bg-[var(--navy)]
+                    transition-all
+                    duration-500
+                    group-hover:w-24
+                  "
+                />
+              </div>
+            </div>
+
+            {/* Gold Border Hover */}
+            <div
+              className="
+                absolute
+                inset-0
+                rounded-[24px]
+                border-2
+                border-transparent
+                group-hover:border-[var(--navy)]
+                transition-all
+                duration-500
+              "
+            />
+          </div>
+        </FadeIn>
+      ))}
+
+    </div>
+  </div>
+</section>
+
 </section>
 
       {/* CTA Section */}
