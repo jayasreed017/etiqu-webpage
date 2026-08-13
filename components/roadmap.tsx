@@ -57,13 +57,40 @@ export function Roadmap() {
   useEffect(() => {
     const handleScroll = () => {
       if (!containerRef.current) return;
-      const rect = containerRef.current.getBoundingClientRect();
-      const scrollProgress = Math.max(0, Math.min(1, -rect.top / (rect.height - window.innerHeight)));
-      const stage = Math.min(6, Math.floor(scrollProgress * 7));
-      setActiveStage(stage);
+
+      const stageElements = containerRef.current.querySelectorAll('[data-stage-index]');
+      if (stageElements.length === 0) {
+        // Fallback to calculation if elements are not rendered yet
+        const rect = containerRef.current.getBoundingClientRect();
+        const scrollProgress = Math.max(0, Math.min(1, -rect.top / (rect.height - window.innerHeight)));
+        const stage = Math.min(6, Math.floor(scrollProgress * 7));
+        setActiveStage(stage);
+        return;
+      }
+
+      const viewportHeight = window.innerHeight;
+      const triggerPoint = viewportHeight * 0.65; // Trigger when element is at 65% of viewport height (just below middle)
+
+      let maxActiveIndex = 0;
+      stageElements.forEach((el) => {
+        const indexAttr = el.getAttribute('data-stage-index');
+        if (indexAttr === null) return;
+        const index = parseInt(indexAttr, 10);
+
+        const elRect = el.getBoundingClientRect();
+        // Check if the top of the element has scrolled past the trigger point
+        if (elRect.top < triggerPoint) {
+          maxActiveIndex = Math.max(maxActiveIndex, index);
+        }
+      });
+
+      setActiveStage(maxActiveIndex);
     };
 
     window.addEventListener('scroll', handleScroll, { passive: true });
+    // Call once initially to set the correct state on load
+    handleScroll();
+
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
@@ -91,6 +118,7 @@ export function Roadmap() {
             return (
               <div
                 key={stage.level}
+                data-stage-index={index}
                 className={`relative flex items-start mb-20 last:mb-0 ${
                   isLeft ? 'md:flex-row' : 'md:flex-row-reverse'
                 }`}

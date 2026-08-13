@@ -50,9 +50,10 @@ export default function Home() {
         <div
           className="absolute inset-0 parallax-bg"
           style={{
-            backgroundImage:
-              "url('https://images.pexels.com/photos/3184291/pexels-photo-3184291.jpeg?auto=compress&cs=tinysrgb&w=1920')",
+              backgroundImage: "url('/hero.jpg')",
+              
           }}
+
         />
 
         <div className="absolute inset-0 hero-overlay" />

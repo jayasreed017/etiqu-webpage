@@ -18,7 +18,6 @@ const programLevels = [
     level: 1,
     title: 'Business Associate',
     icon: TrendingUp,
-    duration: '3-4 Weeks',
     description:
       'The Business Associate role is the foundation of our development program, where individuals gain exposure to sales, marketing, customer interaction, and business operations through practical learning experiences.',
     outcomes: [
@@ -33,7 +32,6 @@ const programLevels = [
     level: 2,
     title: 'Trainee',
     icon: Users,
-    duration: '8-12 Weeks',
     description:
       'HRD Trainers focus on recruitment, people development, and conducting training sessions while building strong communication and leadership capabilities.',
     outcomes: [
@@ -48,7 +46,6 @@ const programLevels = [
     level: 3,
     title: 'Trainer',
     icon: Shield,
-    duration: '8-12 Weeks',
     description:
       'This role focuses on building and managing teams, motivating individuals, and developing leadership through practical team management experiences.',
     outcomes: [
@@ -63,7 +60,6 @@ const programLevels = [
     level: 4,
     title: 'Executive Trainer',
     icon: Crown,
-    duration: '8-12 Weeks',
     description:
       'Assistant Managers are responsible for planning, strategy implementation, people development, office administration, and overall performance management.',
     outcomes: [
@@ -78,7 +74,6 @@ const programLevels = [
     level: 5,
     title: 'Team Leader',
     icon: Building2,
-    duration: '8-12 Weeks',
     description:
       'Owner Partners lead and manage business operations while focusing on expansion, profitability, leadership, and strategic business planning.',
     outcomes: [
@@ -93,7 +88,6 @@ const programLevels = [
     level: 6,
     title: 'Assistant Business Owner',
     icon: Crown,
-    duration: '8-12 Weeks',
     description:
       'Assistant Business Owners work under the guidance of experienced owners, gaining hands-on experience in business management and strategic decision-making.',
     outcomes: [
@@ -108,7 +102,6 @@ const programLevels = [
     level: 7,
     title: 'Business Head',
     icon: Building2,
-    duration: '8-12 Weeks',
     description:
       'Business Heads lead and manage business units, focusing on strategic leadership, operational excellence, and business growth.',
     outcomes: [
@@ -129,8 +122,7 @@ export default function Opportunity() {
         <div
           className="absolute inset-0 parallax-bg bg-cover bg-center"
           style={{
-            backgroundImage:
-              "url('https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&w=1920')",
+            backgroundImage: "url('/opportunity.jpg')",
           }}
         />
 
@@ -277,10 +269,6 @@ export default function Opportunity() {
                           <h3 className="font-playfair text-xl font-semibold text-[var(--navy)]">
                             {level.title}
                           </h3>
-
-                          <span className="text-xs text-[var(--gold)] tracking-wider uppercase">
-                            {level.duration}
-                          </span>
                         </div>
                       </div>
 

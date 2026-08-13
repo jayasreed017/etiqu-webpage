@@ -58,16 +58,17 @@ export function WhyEtiquTimeline() {
                 w-16 h-16
                 rounded-full
                 border-2 border-white/40
+                bg-[var(--navy-dark)]
                 text-white
                 flex items-center justify-center
                 text-xl font-bold
                 transition-all duration-300
                 group-hover:border-[var(--gold)]
                 group-hover:text-[var(--gold)]
-                group-hover:bg-[var(--gold)]/10
               "
             >
-              {item.number}
+              <span className="relative z-10">{item.number}</span>
+              <div className="absolute inset-0 rounded-full bg-[var(--gold)]/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300 z-0" />
             </div>
 
             {/* Title */}
