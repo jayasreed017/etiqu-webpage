@@ -118,7 +118,7 @@ export default function Opportunity() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative min-h-[70vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 parallax-bg bg-cover bg-center"
           style={{

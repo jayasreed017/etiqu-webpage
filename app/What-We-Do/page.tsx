@@ -94,12 +94,11 @@ export default function WhatWeDo() {
   return (
     <>
       {/* Hero */}
-      <section className="relative min-h-[50vh] flex items-center justify-center overflow-hidden">
+      <section className="relative min-h-[80vh] flex items-center justify-center overflow-hidden">
         <div
           className="absolute inset-0 parallax-bg"
           style={{
-            backgroundImage:
-              "url('https://images.pexels.com/photos/3184460/pexels-photo-3184460.jpeg?auto=compress&cs=tinysrgb&w=1920')",
+            backgroundImage: "url('/whatwedo.jpg')",
           }}
         />
         <div className="absolute inset-0 hero-overlay" />

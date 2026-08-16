@@ -91,7 +91,7 @@ export default function Gallery() {
         <div
           className="absolute inset-0 parallax-bg"
           style={{
-            backgroundImage: "url('https://images.pexels.com/photos/3183150/pexels-photo-3183150.jpeg?auto=compress&cs=tinysrgb&w=1920')",
+            backgroundImage: "url('/gallery.jpg')",
           }}
         />
         <div className="absolute inset-0 hero-overlay" />
