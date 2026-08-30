@@ -238,18 +238,8 @@ export default function Home() {
       </section>
 
       {/* CTA Section */}
-      <section className="relative py-32 overflow-hidden">
-        <div
-          className="absolute inset-0 parallax-bg"
-          style={{
-            backgroundImage:
-              "url('https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=1920')",
-          }}
-        />
-
-        <div className="absolute inset-0 hero-overlay" />
-
-        <div className="relative z-10 max-w-3xl mx-auto px-6 text-center">
+      <section className="bg-[var(--navy)] py-24">
+        <div className="max-w-3xl mx-auto px-6 text-center">
           <FadeIn>
             <span className="inline-block text-[var(--gold)] text-xs tracking-[0.4em] uppercase font-semibold mb-6">
               Begin Your Journey
