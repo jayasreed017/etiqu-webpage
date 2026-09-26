@@ -17,28 +17,48 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://etiqu.com'),
+  metadataBase: new URL('https://etiqu.org'),
+
   title: 'ETIQU | Build Your Career with ETIQU',
-  description: 'ETIQU has flourished to being one of the India\'s most unconventional, dynamic and spirited Marketing & Advertising Organization.',
+
+  description:
+    "ETIQU has flourished to being one of India's most unconventional, dynamic and spirited Marketing & Advertising Organization.",
+
   openGraph: {
     title: 'ETIQU | Build Your Career with ETIQU',
-    description: 'A legacy of excellence in professional development and entrepreneurship.',
+
+    description:
+      'A legacy of excellence in professional development and entrepreneurship.',
+
+    url: 'https://etiqu.org',
+
+    siteName: 'ETIQU',
+
     images: [
       {
-        url: 'https://bolt.new/static/og_default.png',
+        url: '/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'ETIQU | Build Your Career with ETIQU',
       },
     ],
+
+    locale: 'en_US',
+
+    type: 'website',
   },
+
   twitter: {
     card: 'summary_large_image',
-    images: [
-      {
-        url: 'https://bolt.new/static/og_default.png',
-      },
-    ],
+
+    title: 'ETIQU | Build Your Career with ETIQU',
+
+    description:
+      'A legacy of excellence in professional development and entrepreneurship.',
+
+    images: ['/og-image.png'],
   },
 };
-
 export default function RootLayout({
   children,
 }: {
